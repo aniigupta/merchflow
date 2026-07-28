@@ -134,7 +134,7 @@ const Tracking = () => {
                 const isPassed = TRACKING_STATES.indexOf(step) < TRACKING_STATES.indexOf(shippingInfo.shippingStatus);
                 return (
                   <div key={step} className="relative group">
-                    <span className={`absolute -left-[30px] top-0.5 h-3.5 w-3.5 rounded-full flex items-center justify-center border text-[8px] font-bold shadow-xs transition-all ${
+                    <span className={`absolute -left-[30px] top-0.5 h-3.5 w-3.5 rounded-full flex items-center justify-center border text-[8px] font-bold shadow-sm transition-all ${
                       getStatusNodeColor(step, shippingInfo.shippingStatus)
                     }`}>
                       {isPassed ? '✓' : isCurrent ? '●' : '○'}

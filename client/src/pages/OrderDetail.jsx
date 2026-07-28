@@ -212,7 +212,7 @@ const OrderDetail = () => {
 
                     {/* Print Artwork Design preview */}
                     {item.designImage && (
-                      <div className="flex items-center gap-1.5 mt-2 p-1 bg-slate-50 border border-slate-200/70 rounded w-fit shadow-xs">
+                      <div className="flex items-center gap-1.5 mt-2 p-1 bg-slate-50 border border-slate-200/70 rounded w-fit shadow-sm">
                         <img src={item.designImage} alt="Artwork" className="h-6 w-6 object-contain rounded bg-white border border-slate-100" />
                         <span className="text-[9px] text-slate-450 font-bold pr-1">Graphic Applied</span>
                       </div>

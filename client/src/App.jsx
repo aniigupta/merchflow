@@ -68,7 +68,7 @@ const Header = () => {
     const isActive = location.pathname === path;
     return `flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold rounded-lg transition-all whitespace-nowrap ${
       isActive
-        ? 'bg-primary-50 text-primary-600 shadow-xs border border-primary-100'
+        ? 'bg-primary-50 text-primary-600 shadow-sm border border-primary-100'
         : 'text-primary-600 hover:bg-primary-50/50'
     }`;
   };
