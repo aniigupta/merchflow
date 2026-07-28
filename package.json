@@ -1,0 +1,22 @@
+{
+  "name": "merchflow-monorepo",
+  "version": "1.0.0",
+  "description": "Root configuration for MerchFlow custom merchandise ecommerce platform",
+  "main": "server/src/index.js",
+  "type": "module",
+  "scripts": {
+    "install:client": "npm install --prefix client",
+    "install:server": "npm install --prefix server",
+    "install:all": "npm run install:client && npm run install:server",
+    "build:client": "npm run build --prefix client",
+    "start": "npm start --prefix server",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "build": "npm run build:client",
+    "postinstall": "npm run install:all"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
