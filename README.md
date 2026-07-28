@@ -1,6 +1,10 @@
 # MerchFlow: Custom Merchandise E-commerce & Order Management Platform
 
-A premium, full-stack web application designed for a custom merchandise business. Customers can browse products, configure printing options (size, color, print type, location, and upload graphic designs), checkout with mock payments, and track their order status. Administrators can configure products and categories, view analytics dashboard aggregates, and advance orders through a sequential lifecycle.
+> **Technical Assessment Submission for the MERN Full Stack Developer position at Ideacraft eVentures Pvt. Ltd.**
+>
+> Submitted by: **Aniket Gupta**  
+> Live Demo: [https://merchflow-y7d3.onrender.com](https://merchflow-y7d3.onrender.com)  
+> GitHub Repository: [https://github.com/aniigupta/merchflow](https://github.com/aniigupta/merchflow)
 
 ---
 
