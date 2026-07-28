@@ -36,7 +36,6 @@ const shippingSchema = new mongoose.Schema(
 
 // Indexes
 shippingSchema.index({ order: 1 });
-shippingSchema.index({ trackingNumber: 1 });
 
 const Shipping = mongoose.model('Shipping', shippingSchema);
 export default Shipping;
