@@ -8,6 +8,48 @@
 
 ---
 
+## 🔄 System Workflow & Order Lifecycle
+
+The diagram below details the end-to-end user workflows for both Customers and Administrators, including the sequential merchandise printing and logistics progression state machine:
+
+```mermaid
+graph TD
+    %% Users
+    Customer([👤 Customer]) --> Browse[Browse Catalog]
+    Admin([👑 Administrator]) --> AdminDash[Admin Dashboard]
+
+    %% Customer Customization Pipeline
+    Browse --> Configure[Configure size, color & print method]
+    Configure --> Upload[Upload Custom Graphic Artwork]
+    Upload --> Cart[Add to Shopping Cart]
+    Cart --> Checkout[Enter Shipping Details & Checkout]
+    Checkout --> MockPayment{Mock Card Payment}
+    MockPayment -- Successful --> OrderPlaced[Status: Order Placed]
+    MockPayment -- Failed --> Checkout
+
+    %% Admin Operations
+    AdminDash --> ManageCatalog[Manage Products & Categories]
+    AdminDash --> OrderQueue[Manage Order Queue]
+
+    %% Sequential Lifecycle Progression (State Machine)
+    OrderPlaced --> VerifyPay[1. Verify Payment]
+    VerifyPay --> ApproveDesign[2. Approve Design Graphics]
+    ApproveDesign --> Printing[3. Printing in Progress]
+    Printing --> QualityCheck[4. Quality Control Passed]
+    QualityCheck --> Packed[5. Packed & Prepared]
+    Packed --> Courier[6. Generate Shipment Tracking Code]
+    
+    %% Logistics & Completion
+    Courier --> Logistics[7. Shipped & Out for Delivery]
+    Logistics --> Delivered([🏁 Delivered to Destination])
+
+    %% Interconnection
+    Courier -.-> Tracking[🔍 Public Logistics Tracking]
+    Customer -.-> Tracking
+```
+
+---
+
 ## 📁 Repository Structure
 
 ```text
